@@ -375,7 +375,7 @@ You do **not** need to manually delete the `target` folder; Maven’s `clean` go
 
 ## LinePlots.java module (line plots)
 
-`LinePlots.java` is the Java equivalent of your C++ `line.cpp`. It showcases multiple line-plot patterns using **XChart** and a Swing **tabbed window**.
+`LinePlots.java` is the Java code for making line plots in Java. It showcases multiple line-plot patterns using **XChart** and a Swing **tabbed window**.
 
 ### High-level structure
 
@@ -408,8 +408,8 @@ You do **not** need to manually delete the `target` folder; Maven’s `clean` go
   - `createBaseChart(...)` – factory for `XYChart` objects with common styling (legend, tooltips, decimal patterns for axes).
 
 - Numeric helpers:
-  - `linspace(double start, double end, int num)` – analog of C++ `linspace`.
-  - `apply(double[] x, DoubleUnaryOperator op)` – applies a function to all elements of `x`, similar to C++ `transform`.
+  - `linspace(double start, double end, int num)`.
+  - `apply(double[] x, DoubleUnaryOperator op)` – applies a function to all elements of `x`.
 
 ### Example 1: Multiple line plots
 
@@ -428,7 +428,6 @@ You do **not** need to manually delete the `target` folder; Maven’s `clean` go
   - Use different line styles (`SOLID`, `DASH_DASH`, `DOT_DOT`).
   - Format axes to 2 decimal places.
 
-This mirrors the first C++ example of multiple overlays on the same axes.
 
 ### Example 2: Plot from “set of vectors”
 
@@ -465,7 +464,6 @@ This mirrors the first C++ example of multiple overlays on the same axes.
   - Bottom: `sin(15x)`
 - These charts are assembled in a `GridLayout(2, 1)` by `wrapChartGrid(...)` and displayed on tab 5.
 
-This is the Java counterpart to the C++ `tiledlayout(2, 1)` example.
 
 ### Example 6: 3×2 grid of subplots
 
@@ -486,7 +484,7 @@ These six charts are placed in a `GridLayout(3, 2)` panel and shown as tab 6.
 
 ## Histograms.java module (histograms)
 
-`Histograms.java` is the Java equivalent of your C++ `histogram.cpp`. It uses `CategoryChart` to represent histograms and a small helper class `HistogramData` to store bin centers, counts, and widths.
+`Histograms.java` is the Java code for making histogram charts in Java. It uses `CategoryChart` to represent histograms and a small helper class `HistogramData` to store bin centers, counts, and widths.
 
 ### High-level structure
 
@@ -510,7 +508,7 @@ These six charts are placed in a `GridLayout(3, 2)` panel and shown as tab 6.
   - Constructed by helper functions that compute histograms from raw samples.
 
 - Random generator:
-  - `randn(int n, double mean, double stdDev)` – uses `Random.nextGaussian()` to generate normal samples (like `randn` in your C++ code).
+  - `randn(int n, double mean, double stdDev)` – uses `Random.nextGaussian()` to generate normal samples.
 
 - Basic statistics and binning utilities:
   - `min`, `max`, `mean`, `stdDev`, `percentile`
@@ -524,7 +522,7 @@ These six charts are placed in a `GridLayout(3, 2)` panel and shown as tab 6.
 - Histogram building utilities:
   - `uniformBinHistogram(...)` and `uniformBinHistogramInRange(...)` — build histograms with a fixed number of equally spaced bins.
   - `histogramWithBinWidth(...)` — builds bins of fixed width over a given range.
-  - `histogramWithCustomEdges(...)` — uses explicit bin edges (like your custom edge vector in C++).
+  - `histogramWithCustomEdges(...)` — uses explicit bin edges.
 
 - Chart construction helpers:
   - `createEmptyHistogramChart(...)` — base `CategoryChart` skeleton with axes titles, legend, decimal patterns.
@@ -537,7 +535,7 @@ These six charts are placed in a `GridLayout(3, 2)` panel and shown as tab 6.
 - Generates 10,000 samples from N(0,1).
 - Uses Freedman–Diaconis (`fdBinCount`) as an “automatic” bin-count estimate.
 - Builds a histogram with integer counts and 2-decimal x-axis labels.
-- Logs the number of bins to the console (similar to `h1->num_bins()` in C++).
+- Logs the number of bins to the console.
 
 ### Example 2: Compare different binning algorithms (2×3)
 
@@ -559,7 +557,7 @@ These six charts are placed in a `GridLayout(3, 2)` panel and shown as tab 6.
 `createHistogram3()`:
 
 - Generates 1,000 samples from N(0,1).
-- Uses a fixed bin count of 50 directly (final state of the dynamic example in C++).
+- Uses a fixed bin count of 50 directly.
 - Sets the chart title to `"<numBins> bins"`.
 
 Dynamic rebinning over time (with sleep) is not reproduced here to keep the Java GUI responsive and simpler; instead, the Java version shows the **final 50-bin configuration**.
@@ -569,7 +567,7 @@ Dynamic rebinning over time (with sleep) is not reproduced here to keep the Java
 `createHistogram4()`:
 
 - Generates 10,000 samples from N(0,1).
-- Uses the explicit custom bin edges that match your C++ example.
+- Uses the explicit custom bin edges.
 - Computes `count_density = count / bin_width` for each bin.
 - Plots count density vs. bin center as a `CategoryChart`.
 - Y-axis is formatted with `0.00` decimal pattern.
@@ -581,7 +579,6 @@ Dynamic rebinning over time (with sleep) is not reproduced here to keep the Java
 - Uses an array of `"yes"`, `"no"`, and `"undecided"` strings.
 - Builds a frequency map (`Map<String, Integer>`).
 - Plots a bar chart where categories are `"no"`, `"yes"`, `"undecided"` in a fixed order.
-- This mirrors the Matplot++ categorical histogram in your C++ code.
 
 ### Example 6: Overlaid normalized histograms (probability)
 
@@ -592,7 +589,7 @@ Dynamic rebinning over time (with sleep) is not reproduced here to keep the Java
   - 5,000 from N(1,1)
 - Determines a global `[min, max]` and uses a common bin width (0.25) for both datasets.
 - Computes **probability** for each bin: `count_i / total_count`.
-- Uses `CategoryChart` with `setOverlapped(true)` so bars from both distributions overlay each other (similar to `hold(on)` in C++).
+- Uses `CategoryChart` with `setOverlapped(true)` so bars from both distributions overlay each other.
 - Legend indicates which distribution is which.
 
 ### Example 7: Histogram normalized to PDF + theoretical normal PDF
@@ -604,7 +601,7 @@ Dynamic rebinning over time (with sleep) is not reproduced here to keep the Java
 - Computes an **empirical PDF**: `count_i / (N * bin_width_i)`.
 - Computes the **theoretical normal PDF** at bin centers using:
   - `normalPdf(x, mu, sigma)`.
-- Plots the empirical PDF as bars and the theoretical PDF as a line (`CategorySeriesRenderStyle.Line`), emulating the `hist + fplot` overlay in your C++ version.
+- Plots the empirical PDF as bars and the theoretical PDF as a line (`CategorySeriesRenderStyle.Line`).
 
 ---
 
@@ -697,13 +694,12 @@ This can be handy when experimenting or when you haven’t defined named executi
 
 ## Implementation tutorial video
 
-A detailed video tutorial walking through:
+A video tutorial about how to compile this repository and making plots with Java.
 
-- The structure of this `Java_Plot` repository,
-- Installing Java, Maven, and XChart,
-- Understanding `LinePlots.java` and `Histograms.java`,
-- Running the examples on Windows with Git Bash,
-
-will be recorded and linked here in the future.
-
-**Video tutorial: coming soon.**
+<a href="" target="_blank">
+  <img
+    src=""
+    alt="Java Plotting with XChart - Implementation Tutorial"
+    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); margin-top: 0.5rem;"
+  />
+</a>

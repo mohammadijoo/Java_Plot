@@ -696,9 +696,9 @@ This can be handy when experimenting or when you haven’t defined named executi
 
 A video tutorial about how to compile this repository and making plots with Java.
 
-<a href="" target="_blank">
+<a href="https://www.youtube.com/watch?v=MBkXIsVwNYg" target="_blank">
   <img
-    src=""
+    src="https://i.ytimg.com/vi/MBkXIsVwNYg/maxresdefault.jpg"
     alt="Java Plotting with XChart - Implementation Tutorial"
     style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); margin-top: 0.5rem;"
   />

@@ -22,19 +22,19 @@
 <!-- ========================================================= -->
 
 <ul style="list-style: none; padding-left: 0; font-size: 0.95rem;">
-  <li>• <a href="#about-this-repository">About this repository</a></li>
-  <li>• <a href="#what-is-xchart-and-how-do-we-plot-in-java">What is XChart and how do we plot in Java?</a></li>
-  <li>• <a href="#installing-prerequisites-java-and-maven">Installing prerequisites: Java and Maven</a></li>
-  <li>• <a href="#installing-xchart-library">Installing XChart library</a></li>
-  <li>• <a href="#project-structure">Project structure</a></li>
-  <li>• <a href="#building-and-running-with-maven">Building and running with Maven</a></li>
-  <li>• <a href="#building-and-running-without-maven">Building and running without Maven</a></li>
-  <li>• <a href="#mvn-compile-vs-mvn-clean-compile">mvn compile vs mvn clean compile</a></li>
-  <li>• <a href="#lineplotsjava-module-line-plots">LinePlots.java module (line plots)</a></li>
-  <li>• <a href="#histogramsjava-module-histograms">Histograms.java module (histograms)</a></li>
-  <li>• <a href="#execjava-and-java2d-rendering-flags">exec:java and Java2D rendering flags</a></li>
-  <li>• <a href="#running-different-main-classes">Running different main classes</a></li>
-  <li>• <a href="#implementation-tutorial-video">Implementation tutorial video</a></li>
+  <li> <a href="#about-this-repository">About this repository</a></li>
+  <li> <a href="#what-is-xchart-and-how-do-we-plot-in-java">What is XChart and how do we plot in Java?</a></li>
+  <li> <a href="#installing-prerequisites-java-and-maven">Installing prerequisites: Java and Maven</a></li>
+  <li> <a href="#installing-xchart-library">Installing XChart library</a></li>
+  <li> <a href="#project-structure">Project structure</a></li>
+  <li> <a href="#building-and-running-with-maven">Building and running with Maven</a></li>
+  <li> <a href="#building-and-running-without-maven">Building and running without Maven</a></li>
+  <li> <a href="#mvn-compile-vs-mvn-clean-compile">mvn compile vs mvn clean compile</a></li>
+  <li> <a href="#lineplotsjava-module-line-plots">LinePlots.java module (line plots)</a></li>
+  <li> <a href="#histogramsjava-module-histograms">Histograms.java module (histograms)</a></li>
+  <li> <a href="#execjava-and-java2d-rendering-flags">exec:java and Java2D rendering flags</a></li>
+  <li> <a href="#running-different-main-classes">Running different main classes</a></li>
+  <li> <a href="#implementation-tutorial-video">Implementation tutorial video</a></li>
 </ul>
 
 ---

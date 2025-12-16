@@ -1,6 +1,6 @@
 <div style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6;">
 
-  <h1 style="margin-bottom: 0.2em;">Java Plotting Playground</h1>
+  <h1 align="center" style="margin-bottom: 0.2em;">Java Plotting Playground</h1>
   <p style="font-size: 0.95rem; max-width: 720px; margin: 0 auto;">
     A minimal, extensible <strong>Java</strong> project showcasing plotting with
     the <strong>XChart</strong> library, starting with
@@ -9,7 +9,7 @@
     Future extensions can include additional plot types such as scatter plots, pie charts, and more.
   </p>
 
-  <p style="font-size: 1rem; color: #666; margin-top: 0.5em;">
+  <p align="center" style="font-size: 1rem; color: #666; margin-top: 0.5em;">
     Built with Java, Maven, XChart, and Swing.
   </p>
 
